@@ -1,0 +1,155 @@
+.form__heading {
+    color: rgb(41, 66, 4);
+    margin-bottom: 1.5rem;
+    text-decoration: underline;
+}
+
+.form__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.form__container--instructions {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    font-style: oblique;
+}
+
+form {
+    width: 110%;
+}
+
+.form__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 8rem;
+    border: solid black 0.15rem;
+}
+
+.login,
+.register,
+.create-vault {
+    padding: 3rem 5rem;
+}
+
+.form__container label {
+    display: block;
+    font-weight: bold;
+}
+
+.form__container input {
+    margin-bottom: 1.25rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 0.1rem solid black;
+    width: 100%;
+}
+
+.form__submit {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.submit-button {
+    border: none;
+    outline: none;
+    padding: .25rem;
+    color: green;
+    background-color: white;
+    border: .1rem solid rgb(7, 131, 13);
+}
+
+.submit-button:hover {
+    background: rgb(7, 131, 13);
+    color: white;
+    cursor: pointer;
+    border: .1rem solid rgb(41, 66, 4);
+}
+
+.dialogs p {
+    margin-top: 1rem;
+}
+
+.dialogs a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: blueviolet;
+}
+
+.eye {
+    position: absolute;
+    margin-left: -1.2rem;
+}
+
+.eye:hover {
+    cursor: pointer;
+}
+
+.response {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: red;
+}
+
+.errmsg {
+    color: red;
+    margin: 1rem
+}
+
+/* totp */
+.form__wrapper-totp {
+    text-align: center;
+}
+
+.form__wrapper-totp label {
+    padding-bottom: 1rem;
+}
+
+.form__wrapper-totp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem;
+    border: solid black 0.15rem;
+}
+
+.totp__instructions {
+    padding-bottom: 1rem;
+}
+
+.form__wrapper-totp input {
+    width: 30%;
+}
+
+@media only screen and (max-width:550px) {
+    .form__wrapper {
+        padding: 3rem 1rem;
+        margin: 1rem;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .login,
+    .register,
+    .create-vault {
+        padding: 3rem 2rem;
+    }
+
+    .totp__instructions {
+        text-align: start;
+    }
+
+    .form__wrapper-totp input {
+        width: 60%;
+    }
+}

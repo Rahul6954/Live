@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.section--login,
+.section--registration {
+    background: url(../assets/images/pexels-veeterzy-303383.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+}
+
+.signup {
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 50px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-radius: 20px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.signup h1 {
+    font-size: 32px;
+    text-align: center;
+    color: #a4243b;
+    margin-bottom: 30px;
+
+}
+
+.signup h2 {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: lighter;
+
+    margin-bottom: 10px;
+}
+
+.signup h2 a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #a4243b;
+}
+
+.signup__field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.signup__field:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    background: #a4243b;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.4s ease;
+}
+
+.signup__field:hover:before {
+    width: 100%;
+}
+
+/*  Input */
+.signup__input {
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    padding: 10px 2px 0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/*  Label */
+.signup__label {
+    color: #bdbdbd;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.signup__input:focus+.signup__label,
+.signup__input:valid+.signup__label {
+    top: 0;
+    font-size: 1rem;
+    background-color: white;
+}
+
+/*  Button */
+
+button {
+    background: #a4243b;
+    color: white;
+    padding: 12px 0;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4b111b;
+}
+
+.eye-toggle {
+    position: absolute;
+    right: 10px;
+    top: -6%;
+    /* transform: translateY(-50%); */
+    background: none !important;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #bdbdbd;
+}
+
+
+.eye-toggle:focus {
+    outline: none !important;
+}
+
+
+
+.info__page--pic {
+    height: 10rem;
+    width: 10rem
+}
+
+.info__page--message {
+    font-size: .75rem;
+}
+
+.info__page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+.card h6 {
+    margin-bottom: 0;
+    color: rgb(3, 173, 252);
+}
+
+.svg {
+    margin-right: 20px;
+}
+
+
+.section--hero {
+    background: url("../assets/images/home_banner.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.navbar>ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar>ul>li {
+    padding: 10px;
+}
+
+
+
+
+.ui__menu {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+    margin: 1rem;
+    padding: 10px;
+}
+
+.ui__menu--header {
+    padding: 0.5rem;
+    font-weight: bolder;
+}
+
+.ui {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+}
+
+.ui a {
+    color: black;
+    background-color: white;
+    border: none;
+    font-weight: 400;
+    list-style: none;
+    padding: 0.25rem 1rem;
+}
+
+.ui a:hover {
+    background-color: rgba(128, 128, 128, 0.486);
+    cursor: pointer;
+}
+
+.ui a {
+    color: black;
+    font-weight: 400;
+}
+
+/* ui-sections */
+.ui-section {
+    margin: 1rem 0;
+}
+
+.ui-section__container {
+    display: flex;
+    width: 95%;
+    flex-direction: column;
+}
+
+.ui-section__container form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ui-section__container form label {
+    display: block;
+    font-weight: 500;
+    margin: 0.15rem;
+}
+
+.ui-section__content input {
+    width: 15rem;
+}
+
+.ui-section__content--button button {
+    margin-top: 1rem;
+    border: none;
+    padding: 0.20rem;
+    background-color: rgba(47, 4, 117, 0.788);
+    color: white;
+    font-weight: 600;
+}
+
+a,
+button:hover {
+    cursor: pointer;
+}
+
+
+.ui-section__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #020202;
+    margin-bottom: 30px;
+}
+
+/* Two-step-Login */
+.ui-section__header p {
+    margin: 1rem 0;
+}
+
+.ui-section__header button {
+    margin-top: 0.25rem;
+    margin-right: 5rem;
+    border: none;
+    padding: 0.20rem;
+    background-color: rgba(47, 4, 117, 0.788);
+    color: white;
+    font-weight: 600;
+}
+
+.instructions {
+    padding: 1rem;
+    padding-bottom: 0;
+}
+
+.qrCode,
+.tCode {
+    text-align: center;
+}
+
+.instructions li {
+    margin-left: 1rem;
+    list-style: decimal;
+    color: black;
+}
+
+
+.ui--buttons__group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@media only screen and (max-width:800px) {
+    .ui__container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .ui__container {
+        grid-template-columns: 1fr;
+    }
+
+    .ui__menu--header {
+        padding: 0;
+        text-align: center;
+    }
+
+    .ui-section__content input {
+        width: 70vw;
+    }
+
+    .ui li {
+        padding: 0 0.5rem;
+    }
+
+    .ui {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ui-section__container {
+        width: 70%;
+    }
+}
+
+.plus {
+    background-color: black;
+    padding: 10px;
+    color: white;
+    font-size: 1rem;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plus:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+.client-label {
+    font-size: 16px;
+}
+
+.first-letter {
+    font-size: 40px;
+    /* Increase the size of the first letter */
+    font-weight: bold;
+    color: #3498db;
+    /* Change color to blue */
+    background-color: #f0f0f0;
+    /* Add background color */
+    padding: 5px;
+    border-radius: 50%;
+    /* Make the first letter appear as an icon */
+}

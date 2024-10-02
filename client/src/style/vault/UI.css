@@ -1,0 +1,166 @@
+.ui__container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-items: center;
+    /* grid-template-rows: ; */
+}
+
+.ui__menu {
+    border: 0.15rem solid black;
+    margin: 1rem;
+}
+
+.ui__menu--header {
+    padding: 0.5rem;
+    font-weight: bolder;
+}
+
+.ui {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ui a {
+    color: black;
+    background-color: white;
+    border: none;
+    font-weight: 400;
+    list-style: none;
+    padding: 0.25rem 1rem;
+}
+
+.ui a:hover {
+    background-color: rgba(128, 128, 128, 0.486);
+    cursor: pointer;
+}
+
+.ui a {
+    color: black;
+    font-weight: 400;
+}
+
+/* ui-sections */
+.ui-section {
+    margin: 1rem 0;
+}
+
+.ui-section__container {
+    display: flex;
+    width: 95%;
+    flex-direction: column;
+}
+
+.ui-section__container form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ui-section__container form label {
+    display: block;
+    font-weight: 500;
+    margin: 0.15rem;
+}
+
+.ui-section__content input {
+    width: 15rem;
+}
+
+.ui-section__content--button button {
+    margin-top: 1rem;
+    border: none;
+    padding: 0.20rem;
+    background-color: rgba(47, 4, 117, 0.788);
+    color: white;
+    font-weight: 600;
+}
+
+a,
+button:hover {
+    cursor: pointer;
+}
+
+/* Two-step-Login */
+.ui-section__header p {
+    margin: 1rem 0;
+}
+
+.ui-section__header button {
+    margin-top: 0.25rem;
+    margin-right: 5rem;
+    border: none;
+    padding: 0.20rem;
+    background-color: rgba(47, 4, 117, 0.788);
+    color: white;
+    font-weight: 600;
+}
+
+.instructions {
+    padding: 1rem;
+    padding-bottom: 0;
+}
+
+.qrCode,
+.tCode {
+    text-align: center;
+}
+
+.instructions li {
+    margin-left: 1rem;
+    list-style: decimal;
+    color: black;
+}
+
+.two-step-form {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.two-fa-form-buttons button {
+    margin: 1rem;
+}
+
+.ui--buttons__group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@media only screen and (max-width:800px) {
+    .ui__container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .ui__container {
+        grid-template-columns: 1fr;
+    }
+
+    .ui__menu--header {
+        padding: 0;
+        text-align: center;
+    }
+
+    .ui-section__content input {
+        width: 70vw;
+    }
+
+    .ui li {
+        padding: 0 0.5rem;
+    }
+
+    .ui {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ui-section__container {
+        width: 70%;
+    }
+}
