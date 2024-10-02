@@ -12,9 +12,9 @@ const ClientRoutes = require('./router/Client/clientRouter')
 const app = express()
 app.use(
   cors({
-    origin: 'http://localhost:5173', // Allow your frontend origin
-    credentials: true,
-  }),
+    origin: 'https://webvault.netlify.app', // Allow your frontend origin
+    credentials: true
+  })
 )
 
 app.use(express.json())
