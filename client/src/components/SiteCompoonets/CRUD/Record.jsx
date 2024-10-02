@@ -16,7 +16,7 @@ const Record = ({
   setSiteModal,
   star,
   setDelModal,
-  setRestoreModal,
+  setRestoreModal
 }) => {
   const [menu, setMenu] = useState(false)
   const [fav, setFav] = useState(site.favorite)
@@ -26,13 +26,16 @@ const Record = ({
 
   const toggleStar = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/vault-data/record-edit/${site._id}`, {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ favorite: !fav }),
-      })
+      const response = await fetch(
+        `https://live-fgzh.onrender.com/api/vault-data/record-edit/${site._id}`,
+        {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ favorite: !fav })
+        }
+      )
       if (!response.ok) {
         throw new Error('Failed to update favorite status.')
       }
@@ -54,7 +57,10 @@ const Record = ({
   }
 
   const outFunction = useCallback(event => {
-    if (!menuRef.current?.contains(event.target) && !menuIconsRef.current?.contains(event.target))
+    if (
+      !menuRef.current?.contains(event.target) &&
+      !menuIconsRef.current?.contains(event.target)
+    )
       setMenu(false)
   }, [])
 
@@ -72,14 +78,17 @@ const Record = ({
     try {
       toast.warn('Site moved to trash!', {
         autoClose: 1500,
-        transition: Slide,
+        transition: Slide
       })
-      const response = await fetch(`http://localhost:5000/api/vault-data/record-delete/${siteId}`, {
-        method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
+      const response = await fetch(
+        `https://live-fgzh.onrender.com/api/vault-data/record-delete/${siteId}`,
+        {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+      )
 
       if (!response.ok) {
         throw new Error('HTTP error! status: ' + response.status)
@@ -99,13 +108,16 @@ const Record = ({
 
   const decryptPassword = async siteObj => {
     try {
-      const response = await fetch('http://localhost:5000/api/vault-decrypt-password/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ siteObj: { password: siteObj.password } }),
-      })
+      const response = await fetch(
+        'https://live-fgzh.onrender.com/api/vault-decrypt-password/',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ siteObj: { password: siteObj.password } })
+        }
+      )
 
       if (!response.ok) {
         throw new Error('Network response was not ok')
@@ -120,10 +132,10 @@ const Record = ({
           return prevSite._id === siteObj._id
             ? {
                 ...prevSite,
-                password: decryptedPassword,
+                password: decryptedPassword
               }
             : prevSite
-        }),
+        })
       )
     } catch (error) {
       console.error('Error decrypting password:', error)
@@ -137,7 +149,7 @@ const Record = ({
         autoClose: 1000,
         transition: Bounce,
         position: 'bottom-center',
-        hideProgressBar: true,
+        hideProgressBar: true
       })
       setMenu(false)
     } catch (err) {
@@ -175,7 +187,9 @@ const Record = ({
       <div className='menu_toogle'>
         <span className='vault__contents--menu' ref={menuIconsRef}>
           {star && (
-            <span onClick={toggleStar}>{fav === true ? <AiFillStar /> : <AiOutlineStar />}</span>
+            <span onClick={toggleStar}>
+              {fav === true ? <AiFillStar /> : <AiOutlineStar />}
+            </span>
           )}
           <IoEllipsisVerticalOutline onClick={toggleMenu} />
         </span>
@@ -186,7 +200,10 @@ const Record = ({
                 {star && (
                   <>
                     <div>
-                      <span onClick={() => handleDelete(site._id)} className='trash'>
+                      <span
+                        onClick={() => handleDelete(site._id)}
+                        className='trash'
+                      >
                         <FaTrash />
                         Remove
                       </span>
@@ -221,13 +238,19 @@ const Record = ({
                 {!star && (
                   <div>
                     <div>
-                      <span onClick={() => restoreSite(site)} className='restore'>
+                      <span
+                        onClick={() => restoreSite(site)}
+                        className='restore'
+                      >
                         <MdOutlineRestorePage />
                         Restore
                       </span>
                     </div>
                     <div>
-                      <span onClick={() => permenantDelete(site)} className='restore'>
+                      <span
+                        onClick={() => permenantDelete(site)}
+                        className='restore'
+                      >
                         <FaTrash />
                         Delete
                       </span>

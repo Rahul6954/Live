@@ -15,7 +15,7 @@ const AllSite = () => {
   // Fetch site data based on the clientId
   const fetchClientData = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/vault-data/${clientId}`, {
+      const response = await fetch(`https://live-fgzh.onrender.com/api/vault-data/${clientId}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

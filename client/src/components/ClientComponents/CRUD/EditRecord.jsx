@@ -34,7 +34,7 @@ const EditModal = ({ clientModal, setModal, modal, clients, setClients }) => {
 
     // Send the updated data to the server using fetch
     try {
-      const response = await fetch(`http://localhost:5000/api/record-edit/${clientModal._id}`, {
+      const response = await fetch(`https://live-fgzh.onrender.com/api/record-edit/${clientModal._id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

@@ -19,7 +19,7 @@ export const ResetPassword = () => {
     const isValidLink = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:5000/api/password/reset-password-check-link/${token}`,
+          `https://live-fgzh.onrender.com/api/password/reset-password-check-link/${token}`,
         )
         setLinkValid(data.success)
       } catch (error) {
@@ -40,7 +40,7 @@ export const ResetPassword = () => {
     } else {
       try {
         const { data } = await axios.post(
-          `http://localhost:5000/api/password/reset-password/${emailId}/${token}`,
+          `https://live-fgzh.onrender.com/api/password/reset-password/${emailId}/${token}`,
           {
             password: pass,
             confirmPassword: cpass,

@@ -29,7 +29,7 @@ const CreateClient = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/api/client-create`, {
+      const response = await fetch(`https://live-fgzh.onrender.com/api/client-create`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`, // Include Bearer token

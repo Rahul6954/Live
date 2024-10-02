@@ -14,7 +14,7 @@ const Trash = () => {
   const fetchData = async () => {
     const clientArr = []
     try {
-      const response = await fetch('http://localhost:5000/api/client-data', {
+      const response = await fetch('https://live-fgzh.onrender.com/api/client-data', {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -47,7 +47,7 @@ const Trash = () => {
   // Delete client by ID
   const handleDelete = async clientId => {
     try {
-      const response = await fetch(`http://localhost:5000/api/record-delete/${clientId}`, {
+      const response = await fetch(`https://live-fgzh.onrender.com/api/record-delete/${clientId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,

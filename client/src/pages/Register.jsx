@@ -29,7 +29,7 @@ export const Register = () => {
       console.log("Password Don't Match!");
     } else {
       try {
-        const response = await fetch('http://localhost:5000/api/auth/register', {
+        const response = await fetch('https://live-fgzh.onrender.com/api/auth/register', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

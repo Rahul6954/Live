@@ -14,7 +14,7 @@ export const ForgotPassword = () => {
     e.preventDefault()
 
     try {
-      await axios.post(`http://localhost:5000/api/password/reset-password-email`, {
+      await axios.post(`https://live-fgzh.onrender.com/api/password/reset-password-email`, {
         emailId,
       })
       setFormSubmitted(true)
