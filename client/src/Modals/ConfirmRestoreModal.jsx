@@ -21,7 +21,7 @@ const ConfirmRestoreModal = ({ clientModal, modal, setClients, clients, setModal
       console.log('Restoring Client:', clientModal._id)
 
       // Restore the client by setting 'deleted' to false
-      const response = await fetch(`https://live-fgzh.onrender.com/api/record-edit/${clientModal._id}`, {
+      const response = await fetch(`https://webvalut.onrender.com/api/record-edit/${clientModal._id}`, {
         method: 'PATCH',
         headers: {
           Authorization: `Bearer ${token}`,

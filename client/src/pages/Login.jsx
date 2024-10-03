@@ -37,7 +37,7 @@ export const Login = () => {
     };
 
     try {
-      const response = await fetch(`https://live-fgzh.onrender.com/api/auth/login`, {
+      const response = await fetch(`https://webvalut.onrender.com/api/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

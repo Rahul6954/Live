@@ -17,7 +17,7 @@ const AllClient = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('https://live-fgzh.onrender.com/api/client-data', {
+      const response = await fetch('https://webvalut.onrender.com/api/client-data', {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,

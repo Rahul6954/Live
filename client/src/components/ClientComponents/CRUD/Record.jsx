@@ -39,7 +39,7 @@ const Record = ({
 
   const toggleStar = async () => {
     try {
-      const response = await fetch(`https://live-fgzh.onrender.com/api/record-edit/${client._id}`, config)
+      const response = await fetch(`https://webvalut.onrender.com/api/record-edit/${client._id}`, config)
       if (!response.ok) {
         throw new Error('Failed to update favorite status.')
       }
@@ -85,7 +85,7 @@ const Record = ({
         autoClose: 1500,
         transition: Slide,
       })
-      const response = await fetch(`https://live-fgzh.onrender.com/api/record-delete/${clientId}`, {
+      const response = await fetch(`https://webvalut.onrender.com/api/record-delete/${clientId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,

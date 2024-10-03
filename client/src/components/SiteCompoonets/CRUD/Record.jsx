@@ -27,7 +27,7 @@ const Record = ({
   const toggleStar = async () => {
     try {
       const response = await fetch(
-        `https://live-fgzh.onrender.com/api/vault-data/record-edit/${site._id}`,
+        `https://webvalut.onrender.com/api/vault-data/record-edit/${site._id}`,
         {
           method: 'PATCH',
           headers: {
@@ -81,7 +81,7 @@ const Record = ({
         transition: Slide
       })
       const response = await fetch(
-        `https://live-fgzh.onrender.com/api/vault-data/record-delete/${siteId}`,
+        `https://webvalut.onrender.com/api/vault-data/record-delete/${siteId}`,
         {
           method: 'DELETE',
           headers: {
@@ -109,7 +109,7 @@ const Record = ({
   const decryptPassword = async siteObj => {
     try {
       const response = await fetch(
-        'https://live-fgzh.onrender.com/api/vault-decrypt-password/',
+        'https://webvalut.onrender.com/api/vault-decrypt-password/',
         {
           method: 'POST',
           headers: {

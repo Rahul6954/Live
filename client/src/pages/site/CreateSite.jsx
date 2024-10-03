@@ -36,7 +36,7 @@ const CreateSite = () => {
     }
 
     try {
-      const response = await fetch(`https://live-fgzh.onrender.com/api/vault-create/${clientId}`, {
+      const response = await fetch(`https://webvalut.onrender.com/api/vault-create/${clientId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

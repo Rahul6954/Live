@@ -18,7 +18,7 @@ const ConfirmDeletionModal = ({ clientModal, modal, setClients, clients, setModa
         transition: Flip,
       })
 
-      const response = await fetch(`https://live-fgzh.onrender.com/api/record-delete/${clientModal._id}`, {
+      const response = await fetch(`https://webvalut.onrender.com/api/record-delete/${clientModal._id}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,
